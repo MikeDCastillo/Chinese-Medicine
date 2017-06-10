@@ -14,6 +14,7 @@
 		73CC37701EEC43530034D4F7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC376F1EEC43530034D4F7 /* TableViewController.swift */; };
 		73CC37721EEC6B6D0034D4F7 /* CaseCountable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC37711EEC6B6D0034D4F7 /* CaseCountable.swift */; };
 		73CC37791EEC93FB0034D4F7 /* DataBaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC37781EEC93FB0034D4F7 /* DataBaseStructure.swift */; };
+		73CC377B1EEC9C9B0034D4F7 /* BodyImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC377A1EEC9C9B0034D4F7 /* BodyImageCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		73CC376F1EEC43530034D4F7 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		73CC37711EEC6B6D0034D4F7 /* CaseCountable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseCountable.swift; sourceTree = "<group>"; };
 		73CC37781EEC93FB0034D4F7 /* DataBaseStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseStructure.swift; sourceTree = "<group>"; };
+		73CC377A1EEC9C9B0034D4F7 /* BodyImageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyImageCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				73CC376F1EEC43530034D4F7 /* TableViewController.swift */,
+				73CC377A1EEC9C9B0034D4F7 /* BodyImageCollectionViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				73CC37791EEC93FB0034D4F7 /* DataBaseStructure.swift in Sources */,
 				73CC375E1EEC43170034D4F7 /* AppDelegate.swift in Sources */,
 				73CC37701EEC43530034D4F7 /* TableViewController.swift in Sources */,
+				73CC377B1EEC9C9B0034D4F7 /* BodyImageCollectionViewController.swift in Sources */,
 				73CC37721EEC6B6D0034D4F7 /* CaseCountable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -41,8 +41,8 @@
         <!--Charts-->
         <scene sceneID="VsY-nf-tnK">
             <objects>
-                <collectionViewController id="Bch-Jb-UWO" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="F6I-nO-PPP">
+                <collectionViewController id="Bch-Jb-UWO" customClass="BodyImageCollectionViewController" customModule="Chinese_Medicine" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="F6I-nO-PPP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,6 +63,10 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eod-4g-24i">
                                             <rect key="frame" x="65" y="65" width="240" height="128"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <gestureRecognizers/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="JnC-8B-bMW" appends="YES" id="FZD-Fn-kcF"/>
+                                            </connections>
                                         </imageView>
                                     </subviews>
                                 </view>
@@ -74,12 +78,17 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Charts" id="hJW-FL-55K"/>
+                    <connections>
+                        <outlet property="bodyImageGestureRecognizer" destination="JnC-8B-bMW" id="OeK-uF-uce"/>
+                        <outlet property="bodyImageView" destination="Eod-4g-24i" id="dmD-rs-xdn"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKS-Eb-D6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="JnC-8B-bMW"/>
             </objects>
             <point key="canvasLocation" x="2720.8000000000002" y="-179.46026986506749"/>
         </scene>
-        <!--View Controller-->
+        <!--Formulas-->
         <scene sceneID="pj4-rG-Sao">
             <objects>
                 <viewController id="9Ql-Lv-XJm" sceneMemberID="viewController">
@@ -90,13 +99,64 @@
                     <view key="view" contentMode="scaleToFill" id="6WN-n7-7uH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Enter ingredients here" translatesAutoresizingMaskIntoConstraints="NO" id="mMr-Rk-rD4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TMC spices" translatesAutoresizingMaskIntoConstraints="NO" id="t6c-vl-FPh">
+                                <rect key="frame" x="0.0" y="108" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4W8-Pr-fMx">
+                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vcr-s8-wd1">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vcr-s8-wd1" id="jei-H1-Ufq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vDV-gs-gh3"/>
+                    <navigationItem key="navigationItem" title="Formulas" id="0hx-yY-vH5">
+                        <barButtonItem key="rightBarButtonItem" title="Create" id="9UF-tI-qS3">
+                            <connections>
+                                <segue destination="74M-FI-CBe" kind="presentation" id="coL-MI-I30"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wuw-gT-3ZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2721" y="561"/>
+            <point key="canvasLocation" x="2720.8000000000002" y="560.86956521739137"/>
+        </scene>
+        <!--Create New Formula-->
+        <scene sceneID="SQS-7t-aSu">
+            <objects>
+                <viewController id="BUG-ZX-QUa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vTc-5O-lTa"/>
+                        <viewControllerLayoutGuide type="bottom" id="L3g-Hv-R0z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Van-YF-vxN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create New Formula" id="wz7-jB-DVh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UmD-Wb-MbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4793" y="392"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xcb-kE-Y6C">
@@ -210,8 +270,88 @@
             </objects>
             <point key="canvasLocation" x="201" y="1009"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DPZ-rk-Noh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="74M-FI-CBe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3LM-YU-Cld">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BUG-ZX-QUa" kind="relationship" relationship="rootViewController" id="iYg-LB-1I6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="leu-jH-jKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3975" y="392"/>
+        </scene>
+        <!--Formula Details-->
+        <scene sceneID="oq9-nA-6kO">
+            <objects>
+                <viewController id="htO-xa-QPL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ccL-Dn-UGf"/>
+                        <viewControllerLayoutGuide type="bottom" id="xXV-8p-r1f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nBg-9d-pId">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0iv-UN-frU">
+                                <rect key="frame" x="0.0" y="255" width="375" height="412"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rml-tj-a83">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rml-tj-a83" id="PZA-a5-wCl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Formula Description &amp; Use here" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ghX-Fb-zN9">
+                                <rect key="frame" x="16" y="72" width="343" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Formula Details" id="fzC-58-02c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vbb-hV-zEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4792.8000000000002" y="1047.5262368815593"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cER-4c-CfV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9FO-Oe-CHD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OCb-mO-mPd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="htO-xa-QPL" kind="relationship" relationship="rootViewController" id="Y2B-1X-0i1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hz-nd-RrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3974" y="1049"/>
+        </scene>
     </scenes>
     <resources>
         <image name="TCM Hand2" width="260" height="250"/>
+        <image name="TMC spices" width="849" height="565"/>
     </resources>
 </document>
