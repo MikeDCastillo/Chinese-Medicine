@@ -10,16 +10,10 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-   
-    // MARK: - Table view data source
-
     enum TableViewDataSourceRow: Int, CaseCountable {
         case bodyChart
         case formulas
+        case bodyPatterns
         
         var title: String {
             switch self {
@@ -27,11 +21,21 @@ class TableViewController: UITableViewController {
                 return "Body Chart"
             case .formulas:
                 return "Formulas"
+            case .bodyPatterns:
+                return "Body Patterns"
             }
         }
+    }
+    
+    // Life-Cycle Functions
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
     }
-
+    
+    // MARK: - Table view data source
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return TableViewDataSourceRow.caseCount
@@ -51,22 +55,17 @@ class TableViewController: UITableViewController {
         case .bodyChart:
             break
             //segue to bodyChart. remove break
-            //FIXME: - read comment
+            //FIXME: - read comment above
         case .formulas:
             break
             //segue to formulas. remove break
             //FIXME: - read comment above
+        case .bodyPatterns:
+            break
+            //segue to body organ patterns
+            //FIXME: - read above
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
