@@ -15,6 +15,10 @@
 		73CC37721EEC6B6D0034D4F7 /* CaseCountable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC37711EEC6B6D0034D4F7 /* CaseCountable.swift */; };
 		73CC37791EEC93FB0034D4F7 /* DataBaseStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC37781EEC93FB0034D4F7 /* DataBaseStructure.swift */; };
 		73CC377B1EEC9C9B0034D4F7 /* BodyImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC377A1EEC9C9B0034D4F7 /* BodyImageCollectionViewController.swift */; };
+		73CC377D1EEE5F8E0034D4F7 /* Pulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC377C1EEE5F8E0034D4F7 /* Pulse.swift */; };
+		73CC377F1EEE5FBE0034D4F7 /* Pathology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC377E1EEE5FBE0034D4F7 /* Pathology.swift */; };
+		73CC37811EEE690B0034D4F7 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC37801EEE690B0034D4F7 /* DataHelper.swift */; };
+		73CC37831EEE6DBD0034D4F7 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CC37821EEE6DBD0034D4F7 /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		73CC37711EEC6B6D0034D4F7 /* CaseCountable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseCountable.swift; sourceTree = "<group>"; };
 		73CC37781EEC93FB0034D4F7 /* DataBaseStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseStructure.swift; sourceTree = "<group>"; };
 		73CC377A1EEC9C9B0034D4F7 /* BodyImageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyImageCollectionViewController.swift; sourceTree = "<group>"; };
+		73CC377C1EEE5F8E0034D4F7 /* Pulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pulse.swift; sourceTree = "<group>"; };
+		73CC377E1EEE5FBE0034D4F7 /* Pathology.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pathology.swift; sourceTree = "<group>"; };
+		73CC37801EEE690B0034D4F7 /* DataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
+		73CC37821EEE6DBD0034D4F7 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				73CC37711EEC6B6D0034D4F7 /* CaseCountable.swift */,
+				73CC37801EEE690B0034D4F7 /* DataHelper.swift */,
+				73CC37821EEE6DBD0034D4F7 /* Keys.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -90,6 +100,8 @@
 		73CC37751EEC87150034D4F7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				73CC377C1EEE5F8E0034D4F7 /* Pulse.swift */,
+				73CC377E1EEE5FBE0034D4F7 /* Pathology.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -188,7 +200,11 @@
 				73CC37791EEC93FB0034D4F7 /* DataBaseStructure.swift in Sources */,
 				73CC375E1EEC43170034D4F7 /* AppDelegate.swift in Sources */,
 				73CC37701EEC43530034D4F7 /* TableViewController.swift in Sources */,
+				73CC377D1EEE5F8E0034D4F7 /* Pulse.swift in Sources */,
+				73CC377F1EEE5FBE0034D4F7 /* Pathology.swift in Sources */,
+				73CC37811EEE690B0034D4F7 /* DataHelper.swift in Sources */,
 				73CC377B1EEC9C9B0034D4F7 /* BodyImageCollectionViewController.swift in Sources */,
+				73CC37831EEE6DBD0034D4F7 /* Keys.swift in Sources */,
 				73CC37721EEC6B6D0034D4F7 /* CaseCountable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
